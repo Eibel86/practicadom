@@ -41,20 +41,9 @@ function getRandomInt(max) {
 };
 console.log(getRandomInt(8));
 //Modificar atributo src y por medio del random darle el valor para que determina la imagen por el valor dado
-imagenBanner.setAttribute("src", bancoImagenBanner[getRandomInt(8)]);
-
-
-
-
-
-
-
-
-
-
-
-
-
+const index = bancoImagenBanner[getRandomInt(bancoImagenBanner.length)];
+imagenBanner.setAttribute("src", bancoImagenBanner[index]);
+///imagenBanner.src = bancoImagenBanner[index];//otra forma que hacer linea 45.
 
 ////////////////  IMAGEN SECTION
 //Acceder al selector de la id imagenSection.
@@ -82,7 +71,7 @@ const imagenSection = document.querySelector("#imagenSection");
  ////DUPLICAR PARA QUE SE VEAN LAS TRES IMAGENES
 galeria.forEach((element) =>{
 /// Crear etiquetas dinamicas
-const div = document.createElement("div");
+const div = document.createElement("div");//cambiar div por article
 const img = document.createElement("img");
 const h2 = document.createElement("h2");
 const p = document.createElement("p");
@@ -100,7 +89,7 @@ p.textContent = element["description"];
 console.log(imagenSection);
 });
 
-
+galeria.forEach();
 
 
 ///ORDEN PARA IR COLOCANDO
@@ -113,12 +102,6 @@ console.log(imagenSection);
 /*4.FUNCIONES*/ 
 
 /*5.POR ULTIMO INVOCAR A LAS FUNCIONES*/
-
-
-
-
-
-
 
 
 /*FUNCION BANER
